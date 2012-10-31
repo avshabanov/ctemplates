@@ -1,0 +1,21 @@
+
+1. Operations on data structures shall be separated from the actual data structure definition.
+It will ease extending the class with various utility functions, e.g.:
+
+#define TREE_NS(name)  		int_##name
+#define TREE_KEY   		int
+#define TREE_SUPPORT_DELETE
+#include <avl_tree.h> /* defines AVL tree and basic operations */
+#include <avl_tree_print.h> /* introduces function that prints AVL tree */
+#include <avl_tree_undef.h> /* undefines all the AVL-tree related macros */
+
+2. Add code that converts stack contents to the array.
+
+3. Add hash table (Google sparse/dense hash table is candidates to convert).
+
+4. Add B-tree.
+
+5. Make it compilable for gcc-x64.
+
+6. Make it compilable for Microsoft C compiler.
+
